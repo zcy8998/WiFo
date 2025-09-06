@@ -1,0 +1,1 @@
+python main.py --device_id 1 --size large --mask_strategy_random none --mask_strategy random --mask_ratio 0.85 --dataset D1*D2*D3*D4*D5*D6*D7*D8*D9*D10*D11*D12 --file_load_path ./weights/wifo_large --few_ratio 0.0 --t_patch_size 4 --patch_size 4 --batch_size 32 --pos_emb SinCos_3D

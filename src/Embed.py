@@ -44,7 +44,6 @@ class SpatialPatchEmb(nn.Module):
         return x
 
 
-
 class TemporalEmbedding(nn.Module):
     def __init__(self, d_model, t_patch_size = 1, hour_size=48, weekday_size = 7):
         super(TemporalEmbedding, self).__init__()

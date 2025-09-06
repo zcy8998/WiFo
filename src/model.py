@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 import math
 import numpy as np
-from timm.models.layers import to_2tuple
+from timm.layers import to_2tuple
 from timm.models.vision_transformer import DropPath, Mlp
 from einops import rearrange
 
@@ -81,6 +81,24 @@ def WiFo_model(args, **kwargs):
             num_heads=8,
             decoder_num_heads=8,
             mlp_ratio=2,
+            t_patch_size = args.t_patch_size,
+            patch_size = args.patch_size,
+            norm_layer=partial(nn.LayerNorm, eps=1e-6),
+            pos_emb = args.pos_emb,
+            no_qkv_bias = bool(args.no_qkv_bias),
+            args = args,
+            **kwargs,
+        )
+        return model
+    elif args.size == 'large':
+        model = WiFo(
+            embed_dim=768,
+            depth=8,
+            decoder_embed_dim = 768,
+            decoder_depth=4, # 默认值为4
+            num_heads=8,
+            decoder_num_heads=8,
+            mlp_ratio=4,
             t_patch_size = args.t_patch_size,
             patch_size = args.patch_size,
             norm_layer=partial(nn.LayerNorm, eps=1e-6),

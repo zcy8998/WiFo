@@ -14,7 +14,7 @@ The dataset used for inference is available in [[Testing Dataset]](https://huggi
 
 
 ## Get Started
-We have released the pre-trained weights of WiFo-Base for inference in [[Model](https://huggingface.co/liuboxun/WiFo)].
+We have released the pre-trained weights of WiFo-Large/Base/Small/Little/Tiny for inference in [[Model](https://huggingface.co/liuboxun/WiFo)].
 
 ### Inference command for multi-dataset unified learning
 ```
@@ -31,12 +31,9 @@ python main.py --device_id 1 --size base --mask_strategy_random none --mask_stra
 If you find this repo helpful, please cite our paper.
 ```latex
 @article{liu2024wifo,
-  author = "Liu Boxun,Gao Shijian,Liu Xuanyu,Cheng Xiang,Yang Liuqing",
-  title = "WiFo: Wireless Foundation Model for Channel Prediction",
-  journal = "SCIENCE CHINA Information Sciences",
-  year = "2025",
-  pages = "-",
-  url = "http://www.sciengine.com/publisher/Science China Press/journal/SCIENCE CHINA Information Sciences///10.1007/s11432-025-4349-0,
-  doi = "https://doi.org/10.1007/s11432-025-4349-0"
+  title={WiFo: Wireless Foundation Model for Channel Prediction},
+  author={Liu, Boxun and Gao, Shijian and Liu, Xuanyu and Cheng, Xiang and Yang, Liuqing},
+  journal={arXiv preprint arXiv:2412.08908},
+  year={2024}
 }
 ```
