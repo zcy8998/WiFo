@@ -1,4 +1,4 @@
-WiFo/src/weights
+*.pkl
 experiments/
 __pycache__/
 logs/
